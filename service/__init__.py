@@ -6,8 +6,11 @@ and SQL database
 """
 import sys
 from flask import Flask
+from flask_talisman import Talisman
 from service import config
 from service.common import log_handlers
+
+talisman = Talisman(app)
 
 # Create Flask application
 app = Flask(__name__)
